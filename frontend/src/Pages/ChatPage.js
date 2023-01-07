@@ -13,10 +13,11 @@
         fetchChats();
 
     },[]);
-console.log(chats);
+     
     return <div> 
-        {chats.map()}
+        {chats}
     </div>;
+
  };
  
  export default ChatPage
