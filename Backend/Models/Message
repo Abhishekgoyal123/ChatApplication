@@ -1,0 +1,24 @@
+const mongoose = require("mongoose");
+
+const messageModel = mongoose.Schema({
+
+    sender : {
+        type: mongoose.Schema.Types.ObjectId,
+        ref:"User"
+    },
+
+    content : {
+        type: string,
+        trim: true
+    },
+
+
+},
+    {
+        timestamps: true
+    }
+);
+
+const Message = mongoose.model("Mesage",messageModel);
+
+module.exports = Message;
